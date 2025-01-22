@@ -7,6 +7,7 @@ nav {
 
 .NavLinks {
   height: 5vh;
+  transition: 0.3s ease, transform 0.3s ease;
 }
 
 nav ul {
@@ -42,6 +43,20 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
+.active {
+  border-bottom: 1px solid #ff6978;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .DesktopNavigation {
     display: none;
@@ -60,6 +75,11 @@ nav ul li a:hover {
   }
 
   .NavLinks {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .NavLinks.show {
+    opacity: 1;
   }
 
   .NavLinks ul {

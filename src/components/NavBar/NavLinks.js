@@ -4,7 +4,7 @@ const NavLinks = ({ isClicked, closeMenu }) => {
   return (
     <nav className="NavLinks">
       <ul>
-        <li onClick={() => isClicked && closeMenu()}>
+        <li className="active" onClick={() => isClicked && closeMenu()}>
           <a href="/">Home</a>
         </li>
         <li onClick={() => isClicked && closeMenu()}>
